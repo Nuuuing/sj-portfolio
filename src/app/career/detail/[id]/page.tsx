@@ -2,12 +2,8 @@ import { DetailLayout } from "@/components";
 import { careerData } from "@/data";
 
 type Params = Promise<{ id: string }>
-//type CareerDetailParams = { id: string }; 
 
 export async function generateStaticParams() {
-    console.log('generateStaticParams is running');
-    console.log('careerData:', careerData);
-
     const params = careerData.map((item) => {
         if (item && item.key !== undefined && item.key !== null) {
             return { id: item.key.toString() };
