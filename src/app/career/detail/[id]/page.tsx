@@ -1,0 +1,34 @@
+import { DetailLayout } from "@/components";
+import { careerData } from "@/modules/career";
+
+//type Params = Promise<{ id: string }>
+type CareerDetailParams = { id: string }; 
+
+
+export async function generateStaticParams() {
+    console.log('generateStaticParams is running');
+    console.log('careerData:', careerData);
+
+    const params = careerData.map((item) => {
+        if (item && item.key !== undefined && item.key !== null) {
+            return { id: item.key.toString() };
+        } else {
+            return null;
+        }
+    }).filter(Boolean);
+
+    return params;
+}
+
+export default async function CareerDetailPage(props: { params: CareerDetailParams }) {
+    const { id } = props.params;
+
+    return (
+        <DetailLayout
+            title={'CAREER'}>
+            <div className="py-[3rem]">
+                {id}
+            </div>
+        </DetailLayout>
+    )
+}
