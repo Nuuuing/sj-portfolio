@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   reactStrictMode: true,
   basePath: isProd ? repo : "",
-  assetPrefix:  isProd ? repo : "", 
+  assetPrefix:  isProd ? `${repo}/` : "", 
   trailingSlash: true,
   images: {
     unoptimized: true,
