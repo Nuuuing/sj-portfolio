@@ -1,9 +1,8 @@
 import { DetailLayout } from "@/components";
-import { careerData } from "@/modules/career";
+import { careerData } from "@/data";
 
-//type Params = Promise<{ id: string }>
-type CareerDetailParams = { id: string }; 
-
+type Params = Promise<{ id: string }>
+//type CareerDetailParams = { id: string }; 
 
 export async function generateStaticParams() {
     console.log('generateStaticParams is running');
@@ -20,8 +19,8 @@ export async function generateStaticParams() {
     return params;
 }
 
-export default async function CareerDetailPage(props: { params: CareerDetailParams }) {
-    const { id } = props.params;
+export default async function CareerDetailPage(props: { params: Params }) {
+    const { id } = await props.params;
 
     return (
         <DetailLayout

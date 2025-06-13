@@ -1,5 +1,7 @@
+'use client'
+
 import { ArrowIcon } from "@/components"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 export const MainSplash = () => {
     return (

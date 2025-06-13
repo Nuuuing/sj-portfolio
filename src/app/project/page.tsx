@@ -1,8 +1,8 @@
 'use client';
 
 import { DetailLayout, ProjDetailCard, Search } from "@/components";
-import { stackType } from "@/modules/common";
-import { projectData } from "@/modules/project";
+import { projectData } from "@/data";
+import { stackType } from "@/types";
 import { useState } from "react";
 
 export default function ProjectPage() {

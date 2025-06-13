@@ -1,6 +1,6 @@
 import { DetailLayout, ImageWithFallback } from "@/components";
-import { skillStackT, stackType } from "@/modules/common";
-import { contentsT, prepImg, projDetailT, projectDetailData } from "@/modules/project";
+import { prepImg, projectDetailData } from "@/data";
+import { contentsT, projDetailT, skillStackT, stackType } from "@/types";
 import dayjs from "dayjs";
 import Image from 'next/image';
 

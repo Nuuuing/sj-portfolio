@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from "framer-motion"
 import { BaseCard } from "../common/BaseCard"
 import Link from "next/link";
 import { projectT, skillStackT } from "@/types";
+import { motion } from "motion/react";
 
 interface ProjCardProps {
     data: projectT;

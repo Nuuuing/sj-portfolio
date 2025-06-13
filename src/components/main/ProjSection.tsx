@@ -3,7 +3,7 @@
 import { ProjCard, Search } from "@/components";
 import { projectData } from "@/data";
 import { stackType } from "@/types";
-import { motion } from "framer-motion"
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useState } from 'react';
 

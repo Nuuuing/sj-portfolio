@@ -1,7 +1,8 @@
 'use client';
 
 import { CareerItem, DetailLayout } from "@/components";
-import { careerData, careerT } from "@/modules/career";
+import { careerData } from "@/data";
+import { careerT } from "@/types";
 
 export default function CareerPage() {
   const CareerMainData = careerData.map((data: careerT, index: number) => {
