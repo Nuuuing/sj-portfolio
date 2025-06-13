@@ -99,8 +99,8 @@ export default async function ProjectDetail(props: { params: Params }) {
                                             <ImageWithFallback
                                                 key={index}
                                                 className="w-4xl h-auto rounded-3xl mb-[3rem]"
-                                                src={url || `/projImg/${prepImg}`}
-                                                fallbackSrc={`/projImg/${prepImg}`}
+                                                src={url || `${prepImg}`}
+                                                fallbackSrc={`${prepImg}`}
                                                 alt={`${data?.projName || 'project'}_${index}`}
                                             />
                                         ))
@@ -167,7 +167,7 @@ const ContentsContainer = (props: ContentsProps) => {
                 data?.imgUrl &&
                 <Image
                     className="w-2xl h-auto rounded-3xl mb-[3rem]"
-                    src={`/projImg/${data.imgUrl}`}
+                    src={`${process.env.BASE_PATH}${data.imgUrl}`}
                     alt={data.midTitle + 'Img'} />
             }
             <h2> {data.midTitle}</h2>

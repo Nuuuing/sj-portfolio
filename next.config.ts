@@ -1,21 +1,21 @@
-import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const repo ='/sj-portfolio';
+const repo = 'sj-portfolio'; 
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  basePath: isProd ? repo : "",
-  assetPrefix:  isProd ? `${repo}/` : "", 
-  trailingSlash: true,
+
+  basePath: isProd ? `/${repo}` : "",         
+  assetPrefix: isProd ? `/${repo}/` : "",       
+  
+  trailingSlash: true, 
   images: {
-    unoptimized: true,
+    unoptimized: true, 
   },
   env: {
-    BASE_PATH: isProd ? repo : "", 
+    BASE_PATH: isProd ? `/${repo}` : "",
   },
 };
-
 
 export default nextConfig;
